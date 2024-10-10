@@ -26,7 +26,6 @@ const JoinRoom: React.FC = () => {
           sessionStorage.removeItem("token");
         }
         sessionStorage.setItem("token", token);
-        console.log(response);
         navigate(`/editor/${roomId}`);
       }
     } catch (error) {
