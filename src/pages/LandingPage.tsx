@@ -123,10 +123,10 @@ const LandingPage: React.FC = () => {
             </p>
           </div>
           <Card className="bg-[#1E293B] border-gray-700 md:w-1/2">
-            <CardContent className="p-6">
+            <CardContent className="p-6 h-[200px] overflow-hidden">
               <motion.pre
                 animate={codeAnimation}
-                className="text-purple-400 font-mono text-sm overflow-x-auto whitespace-pre-wrap"
+                className="text-purple-400 font-mono text-sm h-full overflow-y-auto whitespace-pre-wrap"
               >
                 <code>{codeText}</code>
               </motion.pre>
