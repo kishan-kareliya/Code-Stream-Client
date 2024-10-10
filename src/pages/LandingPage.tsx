@@ -3,8 +3,10 @@ import { motion, useAnimation } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight, Code2 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import FeatureCards from "@/components/FeaturesCardSection";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SupportedLanguagesSection from "@/components/SupportedLanguagesSection";
 import HowItWorks from "@/components/HowItWorks";
 
@@ -123,10 +125,10 @@ const LandingPage: React.FC = () => {
             </p>
           </div>
           <Card className="bg-[#1E293B] border-gray-700 md:w-1/2">
-            <CardContent className="p-6 h-[200px] overflow-hidden">
+            <CardContent className="p-4 md:p-6 h-[200px] overflow-hidden">
               <motion.pre
                 animate={codeAnimation}
-                className="text-purple-400 font-mono text-sm h-full overflow-y-auto whitespace-pre-wrap"
+                className="text-purple-400 font-mono text-sm md:text-md h-full overflow-y-auto whitespace-pre-wrap"
               >
                 <code>{codeText}</code>
               </motion.pre>
@@ -139,7 +141,33 @@ const LandingPage: React.FC = () => {
       </main>
 
       <footer className="container mx-auto px-4 py-8 text-center text-gray-400">
-        <p>&copy; 2024 CodeStream. All rights reserved.</p>
+        <p className="mb-4">Made with ❤️ by Kishan Kareliya</p>
+        <div className="flex justify-center space-x-4">
+          <Link
+            to="https://github.com/kishan-kareliya/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="w-6 h-6 hover:text-[#9333EA] transition-colors" />
+            <span className="sr-only">GitHub</span>
+          </Link>
+          <Link
+            to="https://www.linkedin.com/in/kishan-kareliya/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="w-6 h-6 hover:text-[#9333EA] transition-colors" />
+            <span className="sr-only">LinkedIn</span>
+          </Link>
+          <Link
+            to="https://x.com/kishann__12"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter className="w-6 h-6 hover:text-[#9333EA] transition-colors" />
+            <span className="sr-only">Twitter</span>
+          </Link>
+        </div>
       </footer>
     </div>
   );
