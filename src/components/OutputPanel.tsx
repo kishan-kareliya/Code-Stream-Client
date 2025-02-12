@@ -15,7 +15,7 @@ const OutputPanel: React.FC<OutputPanelProps> = ({ output }) => (
       </h2>
     </div>
     <ScrollArea className="h-[calc(100%-2rem)] rounded-md border border-[#2D3748] bg-[#1E293B] p-2 md:p-4 shadow-inner">
-      <pre className="text-[#E2E8F0] text-sm md:text-base font-mono whitespace-pre-wrap">
+      <pre className="text-[#E2E8F0] text-md md:text-base font-mono whitespace-pre-wrap">
         {output}
       </pre>
     </ScrollArea>
